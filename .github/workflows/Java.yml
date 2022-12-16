@@ -21,7 +21,7 @@ env:
 jobs:
   java-linux-amd64:
     name: Java Linux (amd64)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container: ubuntu:16.04
     env:
       GEN: ninja
@@ -64,7 +64,7 @@ jobs:
 
   java-linux-aarch64:
     name: Java Linux (aarch64)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container: ubuntu:18.04
     needs: java-linux-amd64
     env:
@@ -183,7 +183,7 @@ jobs:
 
   java-combine:
     name: Java Combine
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs:
       - java-linux-aarch64
       - java-linux-amd64
