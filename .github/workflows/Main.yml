@@ -27,7 +27,7 @@ env:
 jobs:
  linux-debug:
     name: Linux Debug
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
 
     env:
       CC: gcc-10
@@ -71,7 +71,7 @@ jobs:
 
  force-storage:
     name: Force Storage
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       CC: gcc-10
@@ -112,7 +112,7 @@ jobs:
 
  force-restart:
     name: Force Restart
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       CC: gcc-10
@@ -153,7 +153,7 @@ jobs:
 
  no-string-inline:
     name: No String Inline / Destroy Unpinned Blocks
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       CC: gcc-10
@@ -195,7 +195,7 @@ jobs:
 
  threadsan:
     name: Thread Sanitizer
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       CC: gcc-10
@@ -242,7 +242,7 @@ jobs:
 
  valgrind:
     name: Valgrind
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       CC: gcc-10
@@ -275,7 +275,7 @@ jobs:
 
  docs:
     name: Website Docs
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     steps:
     - uses: actions/checkout@v3
@@ -300,7 +300,7 @@ jobs:
 
  sqllogic:
     name: Sqllogic tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       CC: gcc-10
@@ -317,7 +317,7 @@ jobs:
 
  expanded:
     name: Expanded
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       CC: gcc-10
@@ -350,7 +350,7 @@ jobs:
 
  odbc:
     name: ODBC
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: linux-debug
     env:
       BUILD_ODBC: 1

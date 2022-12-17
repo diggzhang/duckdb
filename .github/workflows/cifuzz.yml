@@ -12,7 +12,7 @@ jobs:
   Fuzzing:
     name: OSSFuzz
     if: github.repository == 'duckdb/duckdb'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - name: Build Fuzzers
       id: build
@@ -36,7 +36,7 @@ jobs:
   sqlsmith-fuzzing:
     name: SQLSmith Fuzzing
     if: github.repository == 'duckdb/duckdb'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     env:
       BUILD_SQLSMITH: 1
       BUILD_TPCH: 1
@@ -68,7 +68,7 @@ jobs:
   sqlancer-fuzzing:
     name: SQLancer Fuzzing
     if: github.repository == 'duckdb/duckdb'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     env:
       BUILD_SQLSMITH: 1
       BUILD_JDBC: 1
